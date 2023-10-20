@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header></header>
+    <main></main>
+    <footer></footer>
+    <script>
+    function tableCreate() {
+  var body = document.getElementsByTagName('body')[0];
+  var tbl = document.createElement('table');
+  tbl.style.width = '100%';
+  tbl.setAttribute('border', '1');
+  
+  var array = [
+  'Компоненты системы машинного зрения',
+  'Метод обработки изображения: сегментация',
+  'Метод обработки изображения: измерение',
+  'Популярные готовые технологии машинного зрения',
+  'Разница между компьютерным зрением и машинным обучением',
+  'Многослойный перцептрон'
+  ];
+  
+  var tbdy = document.createElement('tbody');
+  for (var i = array.length - 1; i >= 0; i --) {
+    var tr = document.createElement('tr');
+    var kk = array[i];
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode(kk))
+        tr.appendChild(td)
+    
+        var td = document.createElement('td');
+        td.appendChild(document.createTextNode('свободно'))
+        tr.appendChild(td)
+    
+    tbdy.appendChild(tr);
+  }
+  tbl.appendChild(tbdy);
+  body.appendChild(tbl)
+}
+tableCreate();
+    </script>
+  </body>
+</html>
