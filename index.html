@@ -16,24 +16,30 @@
   tbl.setAttribute('border', '1');
   
   var array = [
-  'Компоненты системы машинного зрения',
-  'Метод обработки изображения: сегментация',
-  'Метод обработки изображения: измерение',
-  'Популярные готовые технологии машинного зрения',
-  'Разница между компьютерным зрением и машинным обучением',
-  'Многослойный перцептрон'
+  ['Компоненты системы машинного зрения'],
+  ['Метод обработки изображения: сегментация'],
+  ['Метод обработки изображения: измерение'],
+  ['Популярные готовые технологии машинного зрения'],
+  ['Разница между компьютерным зрением и машинным обучением'],
+  ['Многослойный перцептрон']
   ];
   
   var tbdy = document.createElement('tbody');
   for (var i = array.length - 1; i >= 0; i --) {
     var tr = document.createElement('tr');
-    var kk = array[i];
+    var kd = array[i];
+    var kk = kd[0];
+    if (kd.length == 1){
+      var kb = 'свободно';
+    } else{
+      var kb = kd[1];
+    }
         var td = document.createElement('td');
         td.appendChild(document.createTextNode(kk))
         tr.appendChild(td)
     
         var td = document.createElement('td');
-        td.appendChild(document.createTextNode('свободно'))
+        td.appendChild(document.createTextNode(kb))
         tr.appendChild(td)
     
     tbdy.appendChild(tr);
